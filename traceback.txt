@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 65, in script call
+    call olga_hears_news
+  File "game/script.rpy", line 87, in script call
+    call olga_path
+  File "game/script.rpy", line 109, in script
+    jump revenge_burial
+ScriptError: could not find label 'revenge_burial'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 65, in script call
+    call olga_hears_news
+  File "game/script.rpy", line 87, in script call
+    call olga_path
+  File "game/script.rpy", line 109, in script
+    jump revenge_burial
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1712, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\script.py", line 1103, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'revenge_burial'.
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.7.25031702
+kursova 1.0
+Fri Apr 18 14:04:34 2025
