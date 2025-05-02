@@ -4,7 +4,7 @@
 # Аргумент color змінює колір ім’я персонажа.
 
 
-define i = Character("Князь Ігор")
+define i = Character("Князь гор")
 define g = Character("Дружина")
 define m = Character("Князь Мал")
 define o = Character("Княгиня Ольга")
@@ -185,6 +185,7 @@ label scene_drevlyane_visit:
     stop music fadeout 2.0
 
     return
+label olga_trap_scene:
 
 
 
