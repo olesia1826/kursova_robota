@@ -4,13 +4,14 @@
 # Аргумент color змінює колір ім’я персонажа.
 
 
-define i = Character("Князь гор")
+define i = Character("Князь Ігор")
 define g = Character("Дружина")
 define m = Character("Князь Мал")
 define o = Character("Княгиня Ольга")
 define p = Character("Посланець")
 define b = Character("Боярин")
 define d = Character("Древляни")
+define k = Character("Кияни")
 # Гра починається тут.
 
 label start:
@@ -108,10 +109,13 @@ label olga_path:
     narrator "Ольга сиділа в тронному залі. Її серце палало болем і люттю."
     menu:
         "Ольга вирішує помститися негайно":
+            $ olga_revenge_path = "direct"
             jump revenge_direct
 
         "Ольга скликає раду старійшин":
+            $ olga_revenge_path = "council"
             jump revenge_council
+            
 label revenge_direct:
 
     show olga1 at center
@@ -183,9 +187,43 @@ label scene_drevlyane_visit:
     narrator "Ольга відпустила їх у човен. А в думках її вже зріла помста..."
 
     stop music fadeout 2.0
-
+    jump olga_trap_scene
     return
+
+
 label olga_trap_scene:
+    scene kiev with fade
+    narrator "Город же Київ був тут, де є нині двір Гордятин і Никифорів,{w} і двір княжий був у городі, де є нині двір Воротиславів і Чюдинів,{w} а перевісище було поза городом,{w} поза городом був і двір теремний другий, де є двір доместиків , за святою Богородицею над горою, саме тут був терем кам’яний "
+    narrator "Ольга тим часом звеліла викопати яму велику й глибоку на дворі теремному, поза городом.{w} І назавтра Ольга, сидячи в теремі, послала по гостей."
+    narrator "І прийшли до них кияни, кажучи:"
+    scene city with fade
+    play music "crowd.mp3" fadein 2.0
+    show people at left
+    k "Зове вас Ольга на честь велику"
+    hide people
+    show drev at right
+    d "Не поїдемо ми ні на конях, ні на возах, ні пішки не підемо, а понесіте нас у човні"
+    hide drev
+    show people at left
+    narrator "І сказали кияни:"
+    k "Прийдеться нам нести. Князь наш убитий, а княгиня наша хоче йти за вашого князя"
+    stop music fadeout 2.0
+    hide people
+    hide drev
+    narrator "І понесли їх у човні.{w}Вони ж сиділи, взявшись у боки, величаючись і вигорджуючись, у великих застібках."
+    scene dvir with fade
+    play music "drama.mp3" fadein 2.0
+    narrator " І принесли їх на двір до Ольги, і, нісши їх, так і вкинули з човном у яму."
+    narrator "І, приникнувши до ями, Ольга мовила їм:"
+    show olga3 at left
+    o "Чи добра вам честь?"
+    narrator "Вони ж сказали:"
+    d "Гірша нам смерть, ніж Ігореві"
+    narrator " І повеліла вона засипати їх живими, і засипали їх"
+    stop music fadeout 2.0
+    return
+
+
 
 
 
