@@ -1,53 +1,27 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 69, in script call
-    call olga_hears_news
-  File "game/script.rpy", line 91, in script call
-    call drevl_iskor
-  File "game/script.rpy", line 103, in script call
-    call olga_path
-  File "game/script.rpy", line 208, in script
-    narrator " І принесли їх на двір до Ольги, і, нісши їх, [так] і вкинули з човном у яму."
-NameError: name 'так' is not defined
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Бровко\\AppData\\Roaming/RenPy/kursova-1743939471\\persistent'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 69, in script call
-    call olga_hears_news
-  File "game/script.rpy", line 91, in script call
-    call drevl_iskor
-  File "game/script.rpy", line 103, in script call
-    call olga_path
-  File "game/script.rpy", line 208, in script
-    narrator " І принесли їх на двір до Ольги, і, нісши їх, [так] і вкинули з човном у яму."
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 2586, in execute
-    Say.execute(self)
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 623, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\exports\sayexports.py", line 132, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\character.py", line 1456, in __call__
-    what = self.prefix_suffix("what", self.what_prefix, what, self.what_suffix)
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\character.py", line 1369, in prefix_suffix
-    return (sub(prefix) + sub(body) + sub(suffix))
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\character.py", line 1349, in sub
-    return renpy.substitutions.substitute(s, scope=scope, force=force, translate=translate)[0]
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\substitutions.py", line 373, in substitute
-    s = interpolate(s, variables) # type: ignore
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\substitutions.py", line 86, in interpolate
-    raise e
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\substitutions.py", line 78, in interpolate
-    value = renpy.python.py_eval(code, {}, scope)
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1218, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\python.py", line 1211, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "<none>", line 1, in <module>
-NameError: name 'так' is not defined
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\main.py", line 666, in main
+    renpy.persistent.update(True)
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\persistent.py", line 434, in update
+    save()
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\persistent.py", line 456, in save
+    renpy.loadsave.location.save_persistent(compressed)
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\savelocation.py", line 622, in save_persistent
+    l.save_persistent(data)
+  File "C:\Users\Бровко\Downloads\renpy-8.3.7-sdk\renpy\savelocation.py", line 433, in save_persistent
+    self.persistent_mtime = os.path.getmtime(fn)
+  File "lib/python3.9/genericpath.py", line 55, in getmtime
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Бровко\\AppData\\Roaming/RenPy/kursova-1743939471\\persistent'
 
 Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
-kursova 1.0
-Sat May  3 14:59:12 2025
+Помста Княгині 0.1
+Thu May  8 00:37:39 2025

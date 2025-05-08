@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 124: expected statement.
-    scene_drevlyane_visit
-                         ^
+File "game/script.rpy", line 7: invalid syntax
+    Character("Князь Ігор" color = "4f1733")
+                            ^
 
-File "game/script.rpy", line 127: expected statement.
-    scene_drevlyane_visit
-                         ^
+File "game/script.rpy", line 9: invalid syntax
+    Character("Князь Мал" color ="666666")
+                           ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Fri Apr 18 15:19:22 2025
+Thu May  8 01:14:45 2025
